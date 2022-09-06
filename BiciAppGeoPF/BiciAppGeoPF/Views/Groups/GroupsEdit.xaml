@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiciAppGeoPF.Views.Groups.GroupsEdit">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Editar Grupo"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                   FontSize="Large"/>
+            <Entry x:Name="TxtId"
+                   IsVisible="false">
+
+            </Entry>
+            <Entry x:Name="TxtName"
+                   Placeholder="Ingresa nombre del grupo">
+
+            </Entry>
+            <Button Text="Guardar Cambios"
+                    x:Name="ButtonUpdate"
+                    CornerRadius="15"
+                    Clicked="ButtonUpdate_Clicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

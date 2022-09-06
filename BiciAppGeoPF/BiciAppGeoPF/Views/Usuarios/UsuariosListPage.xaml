@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiciAppGeoPF.Views.Usuarios.UsuariosListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Buscar"
+                       x:Name="TxtSearch"
+                       TextChanged="TxtSearch_TextChanged"
+                       SearchButtonPressed="TxtSearch_SearchButtonPressed"></SearchBar>
+            <ListView x:Name="UsuariosListView" 
+                  ItemsSource="{Binding users}"
+                  HasUnevenRows="True"
+                  ItemTapped="UsuariosListView_ItemTapped"                  
+                  IsRefreshing="True"
+                  IsPullToRefreshEnabled="True"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <StackLayout Orientation="Horizontal" Padding="15">
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Name}" FontSize="Medium" />
+                                        <Label Text="{Binding Email}" FontSize="Medium" />
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </SwipeView>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
