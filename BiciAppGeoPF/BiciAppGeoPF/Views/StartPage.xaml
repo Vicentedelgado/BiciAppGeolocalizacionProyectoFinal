@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiciAppGeoPF.Views.StartPage"
+             BackgroundImage="https://i.ibb.co/j3zLpFf/bikeOwl.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="BIKE"
+                   FontSize="60"
+                   FontAttributes="Bold"
+                   Margin="60,200,0,0"
+                   HorizontalOptions="Start"
+                   TextColor="White"
+                   VerticalOptions="End"
+                   FontFamily="{StaticResource Elianto}" />
+            <Label Text="OWL"
+                   FontSize="75"
+                   FontAttributes="Bold"
+                   Margin="45,0,0,0"
+                   HorizontalOptions="Start"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   FontFamily="{StaticResource  Elianto}" />
+            <StackLayout VerticalOptions="End"
+                         Spacing="5">
+                <Label Text="Desarrollado por"
+                       HorizontalOptions="Start"
+                       TextColor="#9F9E9A"
+                       FontSize="18"
+                       Margin="50,20,30,0"
+                       FontAttributes="Italic" />
+                <Label Text="- José Luis Colcha"
+                       HorizontalOptions="Start"
+                       TextColor="#9F9E9A"
+                       FontSize="18"
+                       Margin="50,2,30,0"
+                       FontAttributes="Italic" />
+                <Label Text="- Anderson Cordova"
+                       HorizontalOptions="Start"
+                       TextColor="#9F9E9A"
+                       FontSize="18"
+                       Margin="50,2,30,0"
+                       FontAttributes="Italic" />
+                <Label Text="- Vicente Delgado"
+                       HorizontalOptions="Start"
+                       TextColor="#9F9E9A"
+                       FontSize="18"
+                       Margin="50,2,30,0"
+                       FontAttributes="Italic" />
+                <Label Text="- Kevin Benavides"
+                       HorizontalOptions="Start"
+                       TextColor="#9F9E9A"
+                       FontSize="18"
+                       Margin="50,2,30,60"
+                       FontAttributes="Italic" />
+                <Button Text="Empezar"
+                        BackgroundColor="#6F4789"
+                        CornerRadius="80"
+                        TextColor="White"
+                        Margin="40,20,40,0"
+                        x:Name="btnStart" 
+                        Clicked="btnStart_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

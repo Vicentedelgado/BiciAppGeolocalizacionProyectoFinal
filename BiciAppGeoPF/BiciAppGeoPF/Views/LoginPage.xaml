@@ -1,41 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BiciAppGeoPF.Views.LoginPage">
+             x:Class="BiciAppGeoPF.Views.LoginPage"
+             BackgroundColor="#48416B">
     <ContentPage.Content>
         <StackLayout Padding="15"
                      VerticalOptions="Center">
             <Label Text="Login"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                   FontSize="Large"/>
-            <Entry Placeholder="Ingresa tu email" x:Name="TxtEmail" ></Entry>
-            <Entry Placeholder="Ingresa tu contraseña"
-                   IsPassword="True"
-                   x:Name="TxtPassword"/>
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   FontFamily="{StaticResource Play}"
+                   FontAttributes="Bold"
+                   TextColor="LightBlue" />
+            <StackLayout Margin="15,10,15,0">
+                <Entry Placeholder="Ingresa tu email"
+                       x:Name="TxtEmail"
+                       PlaceholderColor="#7D74AB" BackgroundColor="#5E548B"></Entry>
+                <Entry Placeholder="Ingresa tu contraseña"
+                       IsPassword="True"
+                       x:Name="TxtPassword"
+                       PlaceholderColor="#7D74AB"
+                       BackgroundColor="#5E548B"/>
+            </StackLayout>
             <Button Text="Entrar"
                     x:Name="BtnSignIn"
-                    CornerRadius="15"
-                    Clicked="BtnSignIn_Clicked"></Button>
-
+                    CornerRadius="30"
+                    Clicked="BtnSignIn_Clicked"
+                    Margin="10,20,10,10"
+                    BackgroundColor="#332D51"
+                    TextColor="White"></Button>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
                 <Label Text="Registrarse"
                        Grid.Row="0"
                        Grid.Column="0"
                        TextColor="LightBlue"
                        HorizontalOptions="Center"
                        FontSize="Medium"
-                       x:Name="LblRegister"
-                       >
+                       x:Name="LblRegister">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer x:Name="RegisterTap"
                                               Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
@@ -45,8 +47,8 @@
                        Grid.Row="0"
                        Grid.Column="1"
                        TextColor="LightBlue"
-                       HorizontalOptions="Center"
-                       FontSize="Medium">
+                       FontSize="Medium"
+                       Margin="0,0,0,0">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer x:Name="ForgotTap"
                                               Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
@@ -55,5 +57,4 @@
             </Grid>
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

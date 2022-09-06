@@ -4,10 +4,7 @@
              x:Class="BiciAppGeoPF.Views.Usuarios.UsuariosListPage">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Buscar"
-                       x:Name="TxtSearch"
-                       TextChanged="TxtSearch_TextChanged"
-                       SearchButtonPressed="TxtSearch_SearchButtonPressed"></SearchBar>
+
             <ListView x:Name="UsuariosListView" 
                   ItemsSource="{Binding users}"
                   HasUnevenRows="True"

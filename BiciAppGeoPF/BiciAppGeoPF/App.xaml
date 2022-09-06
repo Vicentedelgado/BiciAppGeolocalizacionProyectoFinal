@@ -3,6 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BiciAppGeoPF.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <OnPlatform x:Key="Elianto"
+                        x:TypeArguments="x:String">
+                <On Platform="Android"
+                    Value="Elianto-Regular.ttf#Elianto-Regular" />
+            </OnPlatform>
+            <OnPlatform x:Key="Play"
+                        x:TypeArguments="x:String">
+                <On Platform="Android"
+                    Value="play.regular.ttf#play.regular" />
+            </OnPlatform>
+            <OnPlatform x:Key="PlayBold"
+                        x:TypeArguments="x:String">
+                <On Platform="Android"
+                    Value="play.bold.ttf#play.bold" />
+            </OnPlatform>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
