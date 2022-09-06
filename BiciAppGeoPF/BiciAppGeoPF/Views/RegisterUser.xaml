@@ -1,27 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BiciAppGeoPF.Views.RegisterUser">
+             x:Class="BiciAppGeoPF.Views.RegisterUser"
+             BackgroundColor="#48416B">
     <ContentPage.Content>
-        <StackLayout Padding="15">
+        <StackLayout>
             <Label Text="Registro"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" 
-                   FontSize="Large"/>
-            <Entry Placeholder="Nombre"
-                   x:Name="TxtName"></Entry>
-            <Entry Placeholder="Apellido"
-                   x:Name="TxtLastName"></Entry>
-            <Entry Placeholder="Correo"
-                   x:Name="TxtEmail"></Entry>
-            <Entry Placeholder="Contraseña"
-                   IsPassword="True"
-                   x:Name="TxtPassword"></Entry>
-            <Entry Placeholder="Confirma contraseña"
-                   IsPassword="True"
-                   x:Name="TxtConfirmPassword"></Entry>
-            <Button Text="Registrarse" x:Name="ButtonRegister"
-                    Clicked="Register_button" CornerRadius="15"></Button>
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   TextColor="LightBlue"
+                   Margin="0,50,0,15"
+                   FontFamily="{StaticResource Play}"/>
+            <Frame CornerRadius="25"
+                   BackgroundColor="#332D51"
+                   Margin="25,0,25,10">
+                <StackLayout Spacing="5"
+                             Orientation="Vertical">
+                    <Entry Placeholder="Nombre"
+                           x:Name="TxtName"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"
+                           Margin="5,10,5,7"></Entry>
+                    <Entry Placeholder="Apellido"
+                           x:Name="TxtLastName"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"
+                           Margin="6,0,6,7"></Entry>
+                    <Entry Placeholder="Correo"
+                           x:Name="TxtEmail"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"
+                           Margin="6,0,6,7"></Entry>
+                    <Entry Placeholder="Contraseña"
+                           IsPassword="True"
+                           x:Name="TxtPassword"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"
+                           Margin="6,0,6,7"></Entry>
+                    <Entry Placeholder="Confirma contraseña"
+                           IsPassword="True"
+                           x:Name="TxtConfirmPassword"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"
+                           Margin="6,0,6,7"></Entry>
+                    <Button Text="Registrarse"
+                            x:Name="ButtonRegister"
+                            Clicked="Register_button"
+                            CornerRadius="30"
+                            Margin="6,20,6,7"
+                            BackgroundColor="#48416B"
+                            TextColor="White"></Button>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

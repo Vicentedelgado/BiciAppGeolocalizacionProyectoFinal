@@ -54,8 +54,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -63,6 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Elianto-Regular.ttf" />
+    <AndroidAsset Include="Assets\play.regular.ttf" />
+    <AndroidAsset Include="Assets\play.bold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
