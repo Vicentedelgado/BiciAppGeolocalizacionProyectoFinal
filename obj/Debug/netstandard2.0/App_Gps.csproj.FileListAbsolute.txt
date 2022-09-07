@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\bin\Debug\netstandard2.0\App_Gps.deps.json
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\bin\Debug\netstandard2.0\App_Gps.dll
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\bin\Debug\netstandard2.0\App_Gps.pdb
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.AssemblyInfo.cs
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.dll
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\refint\App_Gps.dll
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\App_Gps.pdb
+C:\Users\HP\source\repos\App_Gps\App_Gps\App_Gps\obj\Debug\netstandard2.0\ref\App_Gps.dll
