@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BiciAppGeoPF.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +13,7 @@ namespace BiciAppGeoPF.Views.Usuarios
     public partial class UsuariosListPage : ContentPage
     {
         UsuarioRepository usuarioRepository = new UsuarioRepository();
+        string idgrupo1;
         public UsuariosListPage()
         {
             InitializeComponent();
@@ -30,10 +31,50 @@ namespace BiciAppGeoPF.Views.Usuarios
 
         }
 
-        private void UsuariosListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void UsuariosListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            if (e.Item == null)
+            {
+                return;
+            }
+            var users = e.Item as MUsers;
+            users.IdGroups = idgrupo1;
+            var isUpdate = await usuarioRepository.Update(users);
+            if (isUpdate)
+            {
+                await DisplayAlert("Usuario", "Añadido con exito", "Aceptar");
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                await DisplayAlert("Usuario", "Falló al añadir", "Aceptar");
+            }
 
 
+
+        }
+
+        private async void AddUserGpSwipeItem_Invoked(object sender, EventArgs e)
+        {
+            MUsers users = new MUsers();
+            users.IdGroups = idgrupo1;
+            var isUpdate = await usuarioRepository.Update(users);
+            if (isUpdate)
+            {
+                await DisplayAlert("Usuario", "Añadido con exito", "Aceptar");
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                await DisplayAlert("Usuario", "Falló al añadir", "Aceptar");
+            }
+
+
+        }
+
+        public string GetIdGrupo()
+        {
+            return idgrupo1;
         }
     }
 }

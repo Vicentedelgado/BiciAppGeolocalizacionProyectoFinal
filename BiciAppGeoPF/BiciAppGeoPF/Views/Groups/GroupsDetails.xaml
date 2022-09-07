@@ -5,9 +5,7 @@
              Title="Detalle del Grupo">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Agregar Miembro"
-                     x:Name="AgresarUsuario"
-                     Clicked="AgresarUsuario_Clicked">
-
+                     x:Name="AgresarUsuario">
         </ToolbarItem>
 
     </ContentPage.ToolbarItems>
@@ -19,8 +17,14 @@
                    VerticalOptions="Center" 
                 HorizontalOptions="Center"/>
             <Label Text="InTegrantes"/>
-            
-            
+
+            <Button Text="Ver locación"
+                    x:Name="ButtonGeo"
+                    Clicked="ButtonGeo_Clicked"
+                    CornerRadius="30"
+                    Margin="6,20,6,7"
+                    BackgroundColor="#48416B"
+                    TextColor="White"></Button>
 
         </StackLayout>
     </ContentPage.Content>

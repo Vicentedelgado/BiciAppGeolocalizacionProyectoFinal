@@ -16,6 +16,14 @@
                     <DataTemplate>
                         <ViewCell>
                             <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Agregar" BackgroundColor="LightBlue"
+                                                   x:Name="AddUserGpSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="AddUserGpSwipeItem_Invoked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
                                 <StackLayout Orientation="Horizontal" Padding="15">
                                     <StackLayout HorizontalOptions="StartAndExpand">
                                         <Label Text="{Binding Name}" FontSize="Medium" />

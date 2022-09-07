@@ -48,6 +48,9 @@
                                         <SwipeItem Text="Delete" BackgroundColor="LightCyan" CommandParameter="{Binding Id}"
                                                    x:Name="DeleteSwipeItem"
                                                    Invoked="DeleteMenuItem_Clicked"></SwipeItem>
+                                        <SwipeItem Text="Agregar Usuario" BackgroundColor="LightGray" CommandParameter="{Binding Id}"
+                                                   x:Name="AddUserGrup"
+                                                   Invoked="AddUserGrup_Invoked"></SwipeItem>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
 

@@ -10,7 +10,6 @@
                    FontSize="Large"/>
             <Entry x:Name="TxtId"
                    IsVisible="false">
-
             </Entry>
             <Entry x:Name="TxtName"
                    Placeholder="Ingresa nombre del grupo">

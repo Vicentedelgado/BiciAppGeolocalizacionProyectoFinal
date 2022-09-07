@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiciAppGeoPF.Views.Geolocation.GeoLoPage">
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Start">
+
+            <Label Margin="0,0,0,10"
+                   Text="Geolocation"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   TextColor="#CA6F1E"
+                   HorizontalTextAlignment="Center"></Label>
+
+            <Label Margin="0,0,0,10"
+                   Text="Kevin Benavides. v.01.1"
+                   FontAttributes="Italic"
+                   FontSize="Large"
+                   TextColor="#63CAD7"
+                   HorizontalTextAlignment="Center"></Label>
+
+            <Button x:Name="btnLocation"
+                    Text="Iniciar"
+                    Clicked="btnLocation_Clicked" />
+
+            <Label HorizontalTextAlignment="Center"
+                   x:Name="lblLatitude"></Label>
+            <Label HorizontalTextAlignment="Center"
+                   x:Name="lblLongitude"></Label>
+
+            <Button x:Name="btnOK"
+                    Text="Parar"
+                    Clicked="btnStop_Clicked" />
+            <Button x:Name="btnStop"
+                    Text="Ok"
+                    Clicked="btnOK_Clicked" />
+            <Button x:Name="btnFB"
+                    Text="Guardar ubicacion"
+                    Clicked="btnFB_Clicked" />
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
