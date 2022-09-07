@@ -28,5 +28,9 @@ namespace BiciAppGeoPF.Views
             Navigation.PushAsync(new ChangePassword());
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
+        }
     }
 }

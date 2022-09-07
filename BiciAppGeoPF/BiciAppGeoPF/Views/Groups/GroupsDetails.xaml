@@ -2,26 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BiciAppGeoPF.Views.Groups.GroupsDetails"
-             Title="Detalle del Grupo">
+             Title="Detalle del Grupo"
+             BackgroundColor="#48416B">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Agregar Miembro"
                      x:Name="AgresarUsuario"
-                     Clicked="AgresarUsuario_Clicked">
-
-        </ToolbarItem>
-
+                     Clicked="AgresarUsuario_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            
             <Label x:Name="LabelName"
-                   FontSize="Medium"
-                   VerticalOptions="Center" 
-                HorizontalOptions="Center"/>
-            <Label Text="InTegrantes"/>
-            
-            
-
+                   FontSize="35"
+                   FontFamily="{StaticResource Play}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,4"
+                   TextColor="LightBlue" />
+            <Label Text="Integrantes"
+                   TextColor="White"
+                   FontSize="20" Margin="20,0,20,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

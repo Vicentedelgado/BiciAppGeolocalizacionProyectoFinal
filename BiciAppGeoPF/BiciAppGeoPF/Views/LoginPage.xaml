@@ -2,59 +2,73 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BiciAppGeoPF.Views.LoginPage"
-             BackgroundColor="#48416B">
+             BackgroundColor="#48416B"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout Padding="15"
-                     VerticalOptions="Center">
-            <Label Text="Login"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   FontSize="30"
-                   FontFamily="{StaticResource Play}"
-                   FontAttributes="Bold"
-                   TextColor="LightBlue" />
-            <StackLayout Margin="15,10,15,0">
-                <Entry Placeholder="Ingresa tu email"
-                       x:Name="TxtEmail"
-                       PlaceholderColor="#7D74AB" BackgroundColor="#5E548B"></Entry>
-                <Entry Placeholder="Ingresa tu contraseña"
-                       IsPassword="True"
-                       x:Name="TxtPassword"
-                       PlaceholderColor="#7D74AB"
-                       BackgroundColor="#5E548B"/>
-            </StackLayout>
-            <Button Text="Entrar"
-                    x:Name="BtnSignIn"
-                    CornerRadius="30"
-                    Clicked="BtnSignIn_Clicked"
-                    Margin="10,20,10,10"
-                    BackgroundColor="#332D51"
-                    TextColor="White"></Button>
-            <Grid>
-                <Label Text="Registrarse"
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       TextColor="LightBlue"
+        <StackLayout>
+            <Image Source="https://i.ibb.co/zNhYRwW/back1.png"
+                   VerticalOptions="Start"
+                   HeightRequest="45"
+                   HorizontalOptions="Start"
+                   Margin="25,30,0,130"
+                   x:Name="imgBack">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout Padding="15"
+                         VerticalOptions="Center">
+                <Label Text="Login"
+                       VerticalOptions="Center"
                        HorizontalOptions="Center"
-                       FontSize="Medium"
-                       x:Name="LblRegister">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="RegisterTap"
-                                              Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="Olvide mi contraseña"
-                       Grid.Row="0"
-                       Grid.Column="1"
-                       TextColor="LightBlue"
-                       FontSize="Medium"
-                       Margin="0,0,0,0">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="ForgotTap"
-                                              Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
-                    </Label.GestureRecognizers>
-                </Label>
-            </Grid>
+                       FontSize="30"
+                       FontFamily="{StaticResource Play}"
+                       FontAttributes="Bold"
+                       TextColor="LightBlue" />
+                <StackLayout Margin="15,10,15,0">
+                    <Entry Placeholder="Ingresa tu email"
+                           x:Name="TxtEmail"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B"></Entry>
+                    <Entry Placeholder="Ingresa tu contraseña"
+                           IsPassword="True"
+                           x:Name="TxtPassword"
+                           PlaceholderColor="#7D74AB"
+                           BackgroundColor="#5E548B" />
+                </StackLayout>
+                <Button Text="Entrar"
+                        x:Name="BtnSignIn"
+                        CornerRadius="30"
+                        Clicked="BtnSignIn_Clicked"
+                        Margin="10,20,10,10"
+                        BackgroundColor="#332D51"
+                        TextColor="White"></Button>
+                <Grid>
+                    <Label Text="Registrarse"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           TextColor="LightBlue"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           x:Name="LblRegister">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="RegisterTap"
+                                                  Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Olvide mi contraseña"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           TextColor="LightBlue"
+                           FontSize="Medium"
+                           Margin="0,0,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ForgotTap"
+                                                  Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
