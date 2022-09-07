@@ -19,7 +19,6 @@ Manual de Usuario --> https://youtu.be/7MArzuDJhdg
 
 ## Página de Inicio
 
-
 ![Register](./src/Inicio.jpeg)
 <br />
 
@@ -56,3 +55,7 @@ Datos Respaldados en Firebase
 ![Datos Firebase](./src/Longitud.jpeg)
 
 ![Datos GoogleSheets](./src/Latitud.jpeg)
+
+## App disponible en la tienda de APKPure 
+
+![APKPure](./src/APKPure.jpeg)
