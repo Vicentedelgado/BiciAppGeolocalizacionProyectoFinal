@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BiciAppGeoPF.Views.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -151,6 +152,11 @@ namespace BiciAppGeoPF.Views.Groups
         private void BtnSignIn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new GroupsEntry());
+        }
+
+        private void AddUserGrup_Invoked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new UsuariosListPage());
         }
     }
 }

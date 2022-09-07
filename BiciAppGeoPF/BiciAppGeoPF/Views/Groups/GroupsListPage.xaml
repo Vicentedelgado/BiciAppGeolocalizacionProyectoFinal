@@ -27,7 +27,8 @@
             </StackLayout>
             <Label HorizontalOptions="Center"
                    FontSize="30"
-                   TextColor="LightBlue" Margin="0,20,0,0">Lista de Grupos</Label>
+                   TextColor="LightBlue"
+                   Margin="0,20,0,0">Lista de Grupos</Label>
             <SearchBar Placeholder="Buscar"
                        x:Name="TxtSearch"
                        TextChanged="TxtSearch_TextChanged"
@@ -45,16 +46,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <!--<ViewCell.ContextActions>
-                                <MenuItem Text="Editar"
-                                          x:Name="EditMenuItem"
-                                          CommandParameter="{Binding Id}"
-                                          Clicked="EditMenuItem_Clicked"></MenuItem>
-                                <MenuItem Text="Borrar"
-                                          x:Name="DeleteMenuItem"
-                                          CommandParameter="{Binding Id}"
-                                          Clicked="DeleteMenuItem_Clicked"></MenuItem>
-                            </ViewCell.ContextActions>-->
                             <SwipeView>
                                 <SwipeView.LeftItems>
                                     <SwipeItems>
@@ -68,6 +59,11 @@
                                                    CommandParameter="{Binding Id}"
                                                    x:Name="DeleteSwipeItem"
                                                    Invoked="DeleteMenuItem_Clicked"></SwipeItem>
+                                        <SwipeItem Text="Agregar Usuario"
+                                                   BackgroundColor="LightGray"
+                                                   CommandParameter="{Binding Id}"
+                                                   x:Name="AddUserGrup"
+                                                   Invoked="AddUserGrup_Invoked"></SwipeItem>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
                                 <StackLayout Orientation="Horizontal"
@@ -76,28 +72,7 @@
                                         <Label Text="{Binding NameGrup}"
                                                FontSize="Medium" />
                                     </StackLayout>
-                                    <!--<StackLayout VerticalOptions="Center"
-                                                 HorizontalOptions="EndAndExpand"
-                                                 Orientation="Horizontal">
-                                        <Image Source="edit.png"
-                                           HeightRequest="25"
-                                           WidthRequest="25">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="EditTap" Tapped="EditTap_Tapped"
-                                                              CommandParameter="{Binding Id}"/>
-                                            </Image.GestureRecognizers>
-                                        </Image>
-                                        <Image Source="delete.png"
-                                       HeightRequest="25"
-                                       WidthRequest="25">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="DeleteTapp" Tapped="DeleteTapp_Tapped"
-                                                              CommandParameter="{Binding Id}"/>
-                                            </Image.GestureRecognizers>
-
-                                        </Image>
-
-                                    </StackLayout>-->
+            
                                 </StackLayout>
                             </SwipeView>
                         </ViewCell>

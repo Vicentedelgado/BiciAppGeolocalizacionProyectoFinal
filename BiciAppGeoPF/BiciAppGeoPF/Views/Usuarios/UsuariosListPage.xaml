@@ -4,32 +4,39 @@
              x:Class="BiciAppGeoPF.Views.Usuarios.UsuariosListPage">
     <ContentPage.Content>
         <StackLayout>
-
-            <ListView x:Name="UsuariosListView" 
-                  ItemsSource="{Binding users}"
-                  HasUnevenRows="True"
-                  ItemTapped="UsuariosListView_ItemTapped"                  
-                  IsRefreshing="True"
-                  IsPullToRefreshEnabled="True"
-                  >
+            <ListView x:Name="UsuariosListView"
+                      ItemsSource="{Binding users}"
+                      HasUnevenRows="True"
+                      ItemTapped="UsuariosListView_ItemTapped"
+                      IsRefreshing="True"
+                      IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <SwipeView>
-                                <StackLayout Orientation="Horizontal" Padding="15">
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Agregar"
+                                                   BackgroundColor="LightBlue"
+                                                   x:Name="AddUserGpSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="AddUserGpSwipeItem_Invoked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <StackLayout Orientation="Horizontal"
+                                             Padding="15">
                                     <StackLayout HorizontalOptions="StartAndExpand">
-                                        <Label Text="{Binding Name}" FontSize="Medium" />
-                                        <Label Text="{Binding Email}" FontSize="Medium" />
+                                        <Label Text="{Binding Name}"
+                                               FontSize="Medium" />
+                                        <Label Text="{Binding Email}"
+                                               FontSize="Medium" />
                                     </StackLayout>
-
                                 </StackLayout>
                             </SwipeView>
-
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
