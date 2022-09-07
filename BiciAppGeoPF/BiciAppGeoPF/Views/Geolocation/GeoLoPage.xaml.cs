@@ -100,5 +100,9 @@ namespace BiciAppGeoPF.Views.Geolocation
                   });
             var selected = Items.Where(k => k.Key == SelectedKey.Key).FirstOrDefault();*/
         }
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }

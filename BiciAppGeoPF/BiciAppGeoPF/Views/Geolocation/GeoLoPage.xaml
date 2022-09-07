@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BiciAppGeoPF.Views.Geolocation.GeoLoPage">
+             x:Class="BiciAppGeoPF.Views.Geolocation.GeoLoPage"
+             BackgroundColor="#48416B">
     <StackLayout>
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Start">
@@ -13,12 +14,12 @@
                    TextColor="#CA6F1E"
                    HorizontalTextAlignment="Center"></Label>
 
-            <Label Margin="0,0,0,10"
-                   Text="Kevin Benavides. v.01.1"
-                   FontAttributes="Italic"
-                   FontSize="Large"
-                   TextColor="#63CAD7"
-                   HorizontalTextAlignment="Center"></Label>
+            <Label Text="Tu localización"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   FontSize="45"
+                   Margin="0,20,0,0"
+                   TextColor="LightBlue" />
 
             <Button x:Name="btnLocation"
                     Text="Iniciar"
