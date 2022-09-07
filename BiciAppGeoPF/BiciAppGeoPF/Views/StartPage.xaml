@@ -52,13 +52,13 @@
                        HorizontalOptions="Start"
                        TextColor="#9F9E9A"
                        FontSize="18"
-                       Margin="50,2,30,60"
+                       Margin="50,2,30,40"
                        FontAttributes="Italic" />
                 <Button Text="Empezar"
                         BackgroundColor="#6F4789"
                         CornerRadius="80"
                         TextColor="White"
-                        Margin="40,20,40,0"
+                        Margin="40,0,40,0"
                         x:Name="btnStart" 
                         Clicked="btnStart_Clicked"/>
             </StackLayout>

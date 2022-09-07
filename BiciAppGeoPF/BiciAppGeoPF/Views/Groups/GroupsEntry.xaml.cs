@@ -48,5 +48,9 @@ namespace BiciAppGeoPF.Views.Groups
             TxtName.Text = string.Empty;
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
+        }
     }
 }

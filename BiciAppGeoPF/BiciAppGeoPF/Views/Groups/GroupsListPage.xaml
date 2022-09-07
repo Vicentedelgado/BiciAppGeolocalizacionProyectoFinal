@@ -2,28 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BiciAppGeoPF.Views.Groups.GroupsListPage"
-             Title="Lista de Grupos">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Crear Grupo"
-                     x:Name="AddToolBarItem"
-                     Clicked="AddToolBarItem_Clicked">
-
-        </ToolbarItem>
-
-    </ContentPage.ToolbarItems>
+             BackgroundColor="#48416B"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://i.ibb.co/zNhYRwW/back1.png"
+                       VerticalOptions="Start"
+                       HeightRequest="45"
+                       HorizontalOptions="Start"
+                       Margin="25,30,0,10"
+                       x:Name="imgBack">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button Text="Crear grupo"
+                        x:Name="BtnSignIn"
+                        CornerRadius="15"
+                        Margin="170,33,10,10"
+                        BackgroundColor="#332D51"
+                        TextColor="White"
+                        Clicked="BtnSignIn_Clicked"></Button>
+            </StackLayout>
+            <Label HorizontalOptions="Center"
+                   FontSize="30"
+                   TextColor="LightBlue" Margin="0,20,0,0">Lista de Grupos</Label>
             <SearchBar Placeholder="Buscar"
                        x:Name="TxtSearch"
                        TextChanged="TxtSearch_TextChanged"
-                       SearchButtonPressed="TxtSearch_SearchButtonPressed"></SearchBar>
-            <ListView x:Name="GroupsListView" 
-                  ItemsSource="{Binding groups}"
-                  HasUnevenRows="True"
-                  ItemTapped="GroupsListView_ItemTapped"                  
-                  IsRefreshing="True"
-                  IsPullToRefreshEnabled="True"
-                  >
+                       SearchButtonPressed="TxtSearch_SearchButtonPressed"
+                       PlaceholderColor="#7D74AB"
+                       BackgroundColor="#5E548B"
+                       Margin="20,30,20,20"></SearchBar>
+            <ListView x:Name="GroupsListView"
+                      ItemsSource="{Binding groups}"
+                      HasUnevenRows="True"
+                      ItemTapped="GroupsListView_ItemTapped"
+                      IsRefreshing="True"
+                      IsPullToRefreshEnabled="True"
+                      Margin="20,10,20,10">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -37,15 +55,17 @@
                                           CommandParameter="{Binding Id}"
                                           Clicked="DeleteMenuItem_Clicked"></MenuItem>
                             </ViewCell.ContextActions>-->
-
                             <SwipeView>
                                 <SwipeView.LeftItems>
                                     <SwipeItems>
-                                        <SwipeItem Text="Edit" BackgroundColor="LightBlue"
+                                        <SwipeItem Text="Edit"
+                                                   BackgroundColor="#7D74AB"
                                                    x:Name="EditSwipeItem"
                                                    CommandParameter="{Binding Id}"
                                                    Invoked="EditMenuItem_Clicked"></SwipeItem>
-                                        <SwipeItem Text="Delete" BackgroundColor="LightCyan" CommandParameter="{Binding Id}"
+                                        <SwipeItem Text="Delete"
+                                                   BackgroundColor="#5E548B"
+                                                   CommandParameter="{Binding Id}"
                                                    x:Name="DeleteSwipeItem"
                                                    Invoked="DeleteMenuItem_Clicked"></SwipeItem>
                                         <SwipeItem Text="Agregar Usuario" BackgroundColor="LightGray" CommandParameter="{Binding Id}"
@@ -53,11 +73,11 @@
                                                    Invoked="AddUserGrup_Invoked"></SwipeItem>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
-
-
-                                <StackLayout Orientation="Horizontal" Padding="15">
+                                <StackLayout Orientation="Horizontal"
+                                             Padding="15">
                                     <StackLayout HorizontalOptions="StartAndExpand">
-                                        <Label Text="{Binding NameGrup}" FontSize="Medium" />
+                                        <Label Text="{Binding NameGrup}"
+                                               FontSize="Medium" />
                                     </StackLayout>
                                     <!--<StackLayout VerticalOptions="Center"
                                                  HorizontalOptions="EndAndExpand"
@@ -81,15 +101,12 @@
                                         </Image>
 
                                     </StackLayout>-->
-
                                 </StackLayout>
                             </SwipeView>
-
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
