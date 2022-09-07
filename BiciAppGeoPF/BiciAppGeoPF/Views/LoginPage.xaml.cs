@@ -19,6 +19,7 @@ namespace BiciAppGeoPF.Views
         public LoginPage()
         {
             InitializeComponent();
+            
             bool hasKey = Preferences.ContainsKey("token");
             if (hasKey)
             {
@@ -87,5 +88,9 @@ namespace BiciAppGeoPF.Views
             await Navigation.PushModalAsync(new ForgotPasswordPage());
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }

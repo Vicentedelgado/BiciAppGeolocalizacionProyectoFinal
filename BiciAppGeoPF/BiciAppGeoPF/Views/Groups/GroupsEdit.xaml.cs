@@ -43,5 +43,10 @@ namespace BiciAppGeoPF.Views.Groups
             }
 
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
+        }
     }
 }

@@ -31,11 +31,6 @@ namespace BiciAppGeoPF.Views.Groups
 
         }
 
-        private void AddToolBarItem_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new GroupsEntry());
-        }
-
         private void GroupsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
@@ -65,7 +60,7 @@ namespace BiciAppGeoPF.Views.Groups
 
         private async void DeleteTapp_Tapped(object sender, EventArgs e)
         {
-            var response = await DisplayAlert("Eliminar", "¿Quieres eleminar el grupo de la lista?", "Aceptar", "Cancelar");
+            var response = await DisplayAlert("Eliminar", "¿Quieres eliminar el grupo de la lista?", "Aceptar", "Cancelar");
             if (response)
             {
                 string id = ((TappedEventArgs)e).Parameter.ToString();
@@ -148,5 +143,14 @@ namespace BiciAppGeoPF.Views.Groups
             }
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void BtnSignIn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new GroupsEntry());
+        }
     }
 }

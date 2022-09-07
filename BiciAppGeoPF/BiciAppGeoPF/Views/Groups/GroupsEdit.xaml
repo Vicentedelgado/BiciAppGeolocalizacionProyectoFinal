@@ -1,26 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BiciAppGeoPF.Views.Groups.GroupsEdit">
+             x:Class="BiciAppGeoPF.Views.Groups.GroupsEdit"
+             BackgroundColor="#48416B">
     <ContentPage.Content>
-        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
-            <Label Text="Editar Grupo"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" 
-                   FontSize="Large"/>
-            <Entry x:Name="TxtId"
-                   IsVisible="false">
-
-            </Entry>
-            <Entry x:Name="TxtName"
-                   Placeholder="Ingresa nombre del grupo">
-
-            </Entry>
-            <Button Text="Guardar Cambios"
-                    x:Name="ButtonUpdate"
-                    CornerRadius="15"
-                    Clicked="ButtonUpdate_Clicked">
-            </Button>
+        <StackLayout>
+            <Image Source="https://i.ibb.co/zNhYRwW/back1.png"
+                   VerticalOptions="Start"
+                   HeightRequest="45"
+                   HorizontalOptions="Start"
+                   Margin="25,30,0,130"
+                   x:Name="imgBack">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout Padding="5"
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Editar Grupo"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       FontSize="30"
+                       FontFamily="{StaticResource Play}"
+                       TextColor="LightBlue" Margin="0,0,0,20"/>
+                <Entry x:Name="TxtId"
+                       IsVisible="false"
+                       Margin="15,10,15,0"
+                       PlaceholderColor="#7D74AB"
+                       BackgroundColor="#5E548B"></Entry>
+                <Entry x:Name="TxtName"
+                       Placeholder="Ingresa nombre del grupo"
+                       BackgroundColor="#5E548B"  Margin="15,10,15,0" ></Entry>
+                <Button Text="Guardar Cambios"
+                        x:Name="ButtonUpdate"
+                        CornerRadius="30"
+                        Margin="10,20,10,10"
+                        BackgroundColor="#332D51"
+                        TextColor="White"
+                        Clicked="ButtonUpdate_Clicked"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
