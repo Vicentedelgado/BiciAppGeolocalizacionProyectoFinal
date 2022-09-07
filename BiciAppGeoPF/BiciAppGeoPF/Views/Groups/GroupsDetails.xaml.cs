@@ -1,4 +1,6 @@
-﻿using BiciAppGeoPF.Views.Usuarios;
+﻿using BiciAppGeoPF.Model;
+using BiciAppGeoPF.Views.Geolocation;
+using BiciAppGeoPF.Views.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +20,24 @@ namespace BiciAppGeoPF.Views.Groups
             InitializeComponent();
 
             LabelName.Text = groups.NameGrup;
+            string idgrup = groups.Id;
         }
 
-        private async void AgresarUsuario_Clicked(object sender, EventArgs e)
+        private void AgresarUsuario_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new UsuariosListPage());
+             Navigation.PushModalAsync(new UsuariosListPage());
+        }
+
+        private  void BtnListGrupOnw_Clicked(object sender, EventArgs e)
+        {
+             Navigation.PushModalAsync(new UsuariosListPage());
+
+        }
+
+        private void ButtonGeo_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new GeoLoPage());
+
         }
     }
 }

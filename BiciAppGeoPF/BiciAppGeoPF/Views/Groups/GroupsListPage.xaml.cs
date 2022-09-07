@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BiciAppGeoPF.Model;
+using BiciAppGeoPF.Views.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +40,7 @@ namespace BiciAppGeoPF.Views.Groups
                 return;
             }
             var groupsnet = e.Item as MGroups;
+
             Navigation.PushModalAsync(new GroupsDetails(groupsnet));
             ((ListView)sender).SelectedItem = null;
 

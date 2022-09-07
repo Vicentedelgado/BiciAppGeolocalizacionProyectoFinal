@@ -6,8 +6,9 @@
              BackgroundColor="#48416B">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Agregar Miembro"
-                     x:Name="AgresarUsuario"
-                     Clicked="AgresarUsuario_Clicked"></ToolbarItem>
+
+                     x:Name="AgresarUsuario">
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -21,6 +22,13 @@
             <Label Text="Integrantes"
                    TextColor="White"
                    FontSize="20" Margin="20,0,20,0"/>
+              <Button Text="Ver locación"
+                    x:Name="ButtonGeo"
+                    Clicked="ButtonGeo_Clicked"
+                    CornerRadius="30"
+                    Margin="6,20,6,7"
+                    BackgroundColor="#48416B"
+                    TextColor="White"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

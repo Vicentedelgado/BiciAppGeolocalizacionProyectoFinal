@@ -1,4 +1,5 @@
-﻿using Firebase.Auth;
+﻿using BiciAppGeoPF.Model;
+using Firebase.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;

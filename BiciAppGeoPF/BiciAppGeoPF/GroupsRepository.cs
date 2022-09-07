@@ -1,4 +1,5 @@
-﻿using Firebase.Database;
+﻿using BiciAppGeoPF.Model;
+using Firebase.Database;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
