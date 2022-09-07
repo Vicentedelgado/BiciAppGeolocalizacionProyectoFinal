@@ -155,5 +155,11 @@ namespace BiciAppGeoPF.Views.Groups
         {
             Navigation.PushModalAsync(new GroupsEntry());
         }
+
+        private void AddUserGrup_Invoked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new UsuariosListPage());
+
+        }
     }
 }
