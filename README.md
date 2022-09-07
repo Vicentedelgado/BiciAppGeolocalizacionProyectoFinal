@@ -4,13 +4,11 @@ Ejemplo de aplicativo para con las tecnologías de XamrinForms, Firebase &b Xama
 
 Manual Técnico --> https://youtu.be/40Yew3f9pWI 
 <br />
-Manual de Usuario --> https://youtu.be/WstKUq3LVc8  
+Manual de Usuario --> https://youtu.be/7MArzuDJhdg 
 <br />
 
-![Vista Princiapl](./src/assets/Home.JPG)
-<br />
 
-### El proyecto en Xamarin incluye:
+### El proyecto en XamarinForms incluye:
 
 - Geolocation
 - Routes Protection
